@@ -1,13 +1,18 @@
 import PropTypes from 'prop-types';
 import s from './Profile.module.css';
-import defaultImage from './default.jpg';
+import defaultImage from '../../images/default.jpg';
 
-console.log(defaultImage);
-function Profile({
-  name = 'не известно',
+// const defaultProps = {
+//   name: 'не известно',
+//   imageUrl: defaultImage
+// };
+
+
+export default function Profile({
+  name,
   tag,
   location,
-  imageUrl = defaultImage,
+  imageUrl,
   stats,
   id,
 }) {
@@ -38,6 +43,12 @@ function Profile({
   );
 }
 
+
+Profile.defaultProps = {
+  name: 'не известно',
+  imageUrl: defaultImage
+};
+
 Profile.propTypes = {
   name: PropTypes.string,
   tag: PropTypes.string.isRequired,
@@ -49,4 +60,3 @@ Profile.propTypes = {
   // id: PropTypes.string.isRequired,
 };
 
-export default Profile;

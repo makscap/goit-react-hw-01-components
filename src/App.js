@@ -24,7 +24,7 @@ export default function App() {
       <Section title="Top freelancers:">
         <ProfileList items={user} />
       </Section>
-      <Statistical title="Upload stats" options={statisticalData} />;
+      <Statistical title="Upload stats:" options={statisticalData} />;
       <FriendList friends={friends} />,
       <TransactionHistory items={transactions} />
       {/* {user.map(someUser => (

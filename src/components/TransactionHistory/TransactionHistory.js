@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import s from './TransactionHistory.module.css';
 
-function TransactionHistory({ items }) {
+const TransactionHistory = ({ items }) => {
   return (
     <div>
       <h2 className={s.title}>Transactions:</h2>
